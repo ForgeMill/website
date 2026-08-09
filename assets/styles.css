@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700;800;900&family=Inter:wght@400;600;700&display=swap');:root{--o:#ff6a00;--g:#ffb000;--b:#05080c;--p:#090d12;--m:#9ca6b2;--l:#252c33}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--b);color:#f5f5f5;font-family:Inter,Arial;overflow-x:hidden}header{height:82px;position:absolute;z-index:5;width:100%;padding:0 max(28px,calc((100vw - 1280px)/2));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12;background:#05080cdd}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:white}.brand>b{display:grid;place-items:center;width:48px;height:48px;border:1px solid #333;background:#090d12;color:var(--o);font:900 24px 'Exo 2'}.brand span{font:900 20px 'Exo 2';letter-spacing:.18em}.brand small{display:block;color:var(--o);font-size:8px;letter-spacing:.25em;margin-top:4px}nav{display:flex;gap:28px;align-items:center}nav a{color:#c6cbd0;text-decoration:none;font-size:13px;font-weight:700}.cta{background:var(--o);color:#080a0c!important;padding:13px 18px}.hero{height:850px;position:relative;display:flex;align-items:center;border-bottom:1px solid var(--l);overflow:hidden}.photo{position:absolute;inset:0 0 0 34%;background:linear-gradient(90deg,var(--b),transparent 35%),linear-gradient(0deg,var(--b),transparent 25%),url('assets/forge-hero.png') center/cover}.hero-copy{position:relative;z-index:2;width:min(calc(100% - 56px),1280px);margin:auto}.eyebrow{color:var(--o);font:800 11px 'Exo 2';letter-spacing:.32em}.hero h1,h2{font-family:'Exo 2';font-weight:900;letter-spacing:-.045em;line-height:.9}.hero h1{font-size:clamp(65px,7.5vw,110px);margin:24px 0;max-width:760px}.hero em,h2 em{color:var(--o);font-style:normal}.hero-copy>p:not(.eyebrow){max-width:560px;color:#adb6bf;font-size:17px;line-height:1.7}.button{display:inline-flex;padding:16px 24px;margin:15px 8px 0 0;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:800}.hot{background:linear-gradient(135deg,var(--o),#ff8b00);color:#080a0c}.ghost{border:1px solid #394149;color:#eee}.status{display:block;color:#69737d;margin-top:48px;font-size:9px;letter-spacing:.16em}.status:first-letter{color:#45db8d}.section{padding:115px max(28px,calc((100vw - 1280px)/2));border-bottom:1px solid var(--l)}.head{max-width:800px}.head h2,.copy h2,.proof h2,.final h2{font-size:clamp(44px,5vw,72px);margin:18px 0 22px}.head>p:last-child,.copy>p:last-of-type{color:var(--m);font-size:16px;line-height:1.7}.story{background:radial-gradient(circle,#ff6a0008,transparent 50%),#070a0e}.steps,.process{display:grid;grid-template-columns:1fr 45px 1fr 45px 1fr 45px 1fr;align-items:center;margin-top:70px}.steps article{text-align:center;position:relative}.steps article>i,.process article>i{position:absolute;right:15px;color:#4c545c;font:800 10px 'Exo 2'}.visual{height:145px;display:grid;place-items:center;font-size:80px;color:#555}.heat{color:var(--o);text-shadow:0 0 25px var(--o);transform:rotate(-10deg)}.hammer{color:#aeb4b8}.deliver{font:900 95px 'Exo 2';color:#bbb;text-shadow:0 0 20px var(--o)}.steps h3,.process h3{font:800 19px 'Exo 2'}.steps article p,.process article p{color:#929ca6;font-size:13px;line-height:1.6}.steps>b,.process>b{color:var(--o);font-size:26px;text-align:center}.studio{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:center}.copy ul{list-style:none;padding:0;margin-top:35px}.copy li{border-top:1px solid var(--l);padding:18px 0}.copy strong{display:block;font:800 14px 'Exo 2'}.copy span{display:block;color:#8e98a2;font-size:12px;margin-top:5px}.app{border:1px solid #27343b;background:#061116;box-shadow:0 30px 80px #000}.bar{height:50px;padding:0 15px;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;border-bottom:1px solid #233039;color:#75808a;font-size:9px;letter-spacing:.12em}.bar b{text-align:center;color:#ddd}.bar small{text-align:right}.workspace{height:440px;display:grid;grid-template-columns:145px 1fr}.workspace aside{padding:18px 12px;border-right:1px solid #1f2c33}.workspace aside>b{font-size:8px;color:#69757f;letter-spacing:.15em}.workspace button{display:block;width:100%;margin-top:9px;padding:10px;text-align:left;background:#0a1116;border:1px solid #263139;color:#c8cdd1}.canvas{position:relative;overflow:hidden;background-color:#041116;background-image:linear-gradient(#12303933 1px,transparent 1px),linear-gradient(90deg,#12303933 1px,transparent 1px);background-size:18px 18px}.canvas svg{position:absolute;width:100%;height:100%}.canvas path{fill:none;stroke:var(--o);stroke-width:2;stroke-dasharray:7 8}.node{position:absolute;width:140px;padding:12px;border:1px solid #354048;background:#090f14}.node small{color:var(--o);font-size:8px}.node b{display:block;font-size:11px;margin-top:5px}.n1{left:6%;top:15%}.n2{left:6%;top:64%}.n3{left:43%;top:39%}.n4{right:4%;top:65%}.metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #233039}.metrics span{padding:12px;color:#65717b;font-size:8px}.metrics b{display:block;color:#eee;font-size:15px}.metrics span:last-child b{color:#52dc97}.execution{background:#06090d}.center{text-align:center;margin:auto}.process article{min-height:265px;padding:24px;border:1px solid #222a30;background:linear-gradient(145deg,#0a0e13,#06090c);position:relative}.process article>div{width:62px;height:62px;display:grid;place-items:center;border:1px solid #49301f;color:var(--o);font-size:24px}.process small{color:#626c75;font-size:8px;letter-spacing:.13em}.proof{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.proof pre{border:1px solid #293239;background:#020608;padding:32px;color:#aab3bb;font:12px/2.2 monospace;box-shadow:0 20px 60px #000}.final{text-align:center;min-height:560px}.final h2{font-size:clamp(52px,7vw,95px)}.final>p:not(.eyebrow){color:#9ca6b0}footer{height:110px;padding:0 max(28px,calc((100vw - 1280px)/2));display:flex;align-items:center;gap:8px;font:900 17px 'Exo 2';letter-spacing:.15em}footer small{color:var(--o);font-size:8px}footer span{margin-left:auto;color:#69737d;font:400 11px Inter;letter-spacing:0}@media(max-width:900px){nav{display:none}.photo{inset:0;background:linear-gradient(90deg,#05080cee,#05080c66),url('assets/forge-hero.png') 60%/cover}.steps,.process{grid-template-columns:1fr}.steps>b,.process>b{transform:rotate(90deg);margin:10px}.studio,.proof{grid-template-columns:1fr}.app{overflow:auto}.workspace,.metrics{min-width:650px}.section{padding-top:80px;padding-bottom:80px}}@media(max-width:550px){.hero{height:760px}.hero h1{font-size:56px}.hero-copy{width:calc(100% - 36px)}.button{display:flex;max-width:280px}.section{padding-left:18px;padding-right:18px}.head h2,.copy h2{font-size:40px}.proof pre{overflow:auto;padding:20px}.brand span{font-size:16px}}.show{opacity:1!important;transform:none!important}
+/* V2 — direct brand-board alignment */
+.brand-image{display:block}
+.brand-image img{width:145px;height:72px;object-fit:contain;object-position:left center;mix-blend-mode:screen}
+.hero{height:720px;min-height:720px}
+.hero .photo{left:47%;background:linear-gradient(90deg,#05080c 0%,#05080cee 4%,transparent 35%),linear-gradient(0deg,#05080c 0%,transparent 24%),url('assets/forge-hero.png') center/cover no-repeat}
+.hero-copy{padding-top:52px}
+.hero h1{font-size:clamp(50px,5.4vw,78px);max-width:610px;line-height:.92;margin:20px 0 22px}
+.hero-copy>p:not(.eyebrow){font-size:14px;max-width:500px;line-height:1.65}
+.hero .button{padding:13px 22px;font-size:10px}
+.hero .status{margin-top:30px}
+@media(max-width:900px){
+ .brand-image img{width:125px}
+ .hero{height:760px}
+ .hero .photo{left:0;background:linear-gradient(90deg,#05080cf2,#05080c88),url('assets/forge-hero.png') 62% center/cover no-repeat}
+}
+
+
+/* Bottom-page spacing cleanup */
+.proof{
+  padding-top:80px;
+  padding-bottom:80px;
+}
+
+.final{
+  min-height:0;
+  padding-top:90px;
+  padding-bottom:90px;
+}
+
+footer{
+  height:auto;
+  min-height:90px;
+  padding-top:28px;
+  padding-bottom:28px;
+}
+
+@media(max-width:900px){
+  .proof{padding-top:70px;padding-bottom:70px}
+  .final{min-height:0;padding-top:80px;padding-bottom:80px}
+}
+
+@media(max-width:550px){
+  .final{padding-top:70px;padding-bottom:70px}
+}
+
+
+/* Forge icon visibility fix */
+.steps .visual img,
+.process article > div img,
+.workspace button img {
+  opacity: 1;
+  filter: none;
+}
+
+.steps .visual img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.process article > div img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
