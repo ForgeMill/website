@@ -311,3 +311,164 @@
     padding-bottom: 30px !important;
   }
 }
+/* M100 - Google Startup Compliance Public Website Integration */
+.section.live-product,
+.section.team {
+    background:#070b10;
+}
+
+.section.live-product .head,
+.section.team .head {
+    max-width:900px;
+    margin:0 auto 52px;
+    text-align:center;
+}
+
+.section.live-product .head h2,
+.section.team .head h2 {
+    font-size:clamp(42px,4vw,64px);
+    margin:10px auto;
+}
+
+.section.live-product .head p:not(.eyebrow),
+.section.team .head p:not(.eyebrow) {
+    max-width:760px;
+    margin:20px auto;
+    font-size:17px;
+    line-height:1.7;
+}
+
+.live-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:22px;
+}
+
+.live-card {
+    min-height:300px;
+    padding:34px;
+    border:1px solid #2e3843;
+    border-radius:8px;
+    background:#090d12;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.live-card h3,
+.team-card h3 {
+    margin:20px 0 12px;
+    font:900 26px 'Exo 2';
+    letter-spacing:-.02em;
+}
+
+.live-card p {
+    flex:1;
+    margin:0;
+    color:#adb6bf;
+    font-size:15px;
+    line-height:1.7;
+}
+
+.live-card .button {
+    margin-top:26px;
+}
+
+.live-badge {
+    display:inline-flex;
+    align-items:center;
+    min-height:26px;
+    padding:5px 9px;
+    border:1px solid #ff6a0066;
+    border-radius:999px;
+    color:#ff8f33;
+    background:#ff6a0012;
+    font:800 10px 'Exo 2';
+    letter-spacing:.18em;
+}
+
+.team-card {
+    max-width:1000px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    gap:48px;
+    padding:42px;
+    border:1px solid #2e3843;
+    border-radius:8px;
+    background:#090d12;
+}
+
+.team-role {
+    margin:0;
+    color:#ff6a00 !important;
+    font:800 11px 'Exo 2';
+    letter-spacing:.24em;
+}
+
+.team-identity p:last-child {
+    color:#adb6bf;
+    line-height:1.7;
+}
+
+.team-links {
+    display:grid;
+    gap:12px;
+}
+
+.team-links a {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:54px;
+    padding:0 18px;
+    border:1px solid #303943;
+    border-radius:5px;
+    color:#f5f5f5;
+    background:#05080c;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+    transition:border-color .2s ease,color .2s ease,transform .2s ease;
+}
+
+.team-links a:hover {
+    border-color:#ff6a00;
+    color:#ff8f33;
+    transform:translateY(-1px);
+}
+
+.team-links span {
+    color:#ff6a00;
+}
+
+.team-note {
+    max-width:1000px;
+    margin:18px auto 0;
+    color:#69737d !important;
+    font-size:12px;
+    line-height:1.6;
+}
+
+@media(max-width:999px) {
+    .live-grid,
+    .team-card {
+        grid-template-columns:1fr;
+    }
+
+    .team-card {
+        gap:24px;
+        padding:28px;
+    }
+}
+
+@media(max-width:550px) {
+    .live-card {
+        min-height:0;
+        padding:26px;
+    }
+
+    .team-card {
+        padding:24px;
+    }
+}
