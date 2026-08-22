@@ -1,0 +1,122 @@
+name: Website Quality Gate
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  static-compliance:
+    name: Website / Static Compliance
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify public website contract
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+
+          $index = Get-Content -LiteralPath "index.html" -Raw
+          $styles = Get-Content -LiteralPath "styles.css" -Raw
+          $script = Get-Content -LiteralPath "script.js" -Raw
+          $cname = (Get-Content -LiteralPath "CNAME" -Raw).Trim()
+
+          $required = @(
+              'id="live"',
+              'id="team"',
+              'https://app.forgemill.dev',
+              'https://app.forgemill.dev/api/status',
+              'https://github.com/Leafs29',
+              'https://github.com/ForgeMill',
+              'https://github.com/ForgeMill/website',
+              'founder@forgemill.dev',
+              'LAUNCH LIVE FORGE',
+              'FOUNDER &amp; CORE TEAM'
+          )
+
+          foreach ($marker in $required) {
+              if (-not $index.Contains($marker)) {
+                  throw "Required website marker missing: $marker"
+              }
+          }
+
+          $lower = $index.ToLowerInvariant()
+
+          $prohibited = @(
+              "under construction",
+              "join waitlist",
+              "join the waitlist",
+              "request a demo",
+              "beta access"
+          )
+
+          foreach ($marker in $prohibited) {
+              if ($lower.Contains($marker)) {
+                  throw "Prohibited placeholder language detected: $marker"
+              }
+          }
+
+          if ($cname -ne "forgemill.dev") {
+              throw "CNAME must remain exactly forgemill.dev."
+          }
+
+          if (-not $styles.Contains(
+              "M100 - Google Startup Compliance Public Website Integration"
+          )) {
+              throw "M100 website styling marker is missing."
+          }
+
+          if (-not $script.Contains(
+              ".live-card,.team-card"
+          )) {
+              throw "M100 website animation integration is missing."
+          }
+
+          $matches = [regex]::Matches(
+              $index,
+              '(?:href|src)="([^"]+)"'
+          )
+
+          foreach ($match in $matches) {
+              $reference =
+                  [string]$match.Groups[1].Value
+
+              if (
+                  $reference.StartsWith("#") -or
+                  $reference.StartsWith("https://") -or
+                  $reference.StartsWith("http://") -or
+                  $reference.StartsWith("mailto:") -or
+                  $reference.StartsWith("data:") -or
+                  $reference.StartsWith("javascript:")
+              ) {
+                  continue
+              }
+
+              $clean =
+                  ($reference -split "[?#]")[0]
+
+              if ([string]::IsNullOrWhiteSpace($clean)) {
+                  continue
+              }
+
+              $path =
+                  $clean.Replace(
+                      "/",
+                      "\"
+                  )
+
+              if (-not (Test-Path -LiteralPath $path)) {
+                  throw "Missing local website asset: $clean"
+              }
+          }
+
+          Write-Host "Website static compliance verified."
