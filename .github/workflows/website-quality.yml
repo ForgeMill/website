@@ -39,6 +39,8 @@ jobs:
               'https://github.com/ForgeMill',
               'https://github.com/ForgeMill/website',
               'founder@forgemill.dev',
+              'class="team-public-name"',
+              '@Leafs29 on GitHub',
               'LAUNCH LIVE FORGE',
               'FOUNDER &amp; CORE TEAM'
           )
@@ -47,6 +49,10 @@ jobs:
               if (-not $index.Contains($marker)) {
                   throw "Required website marker missing: $marker"
               }
+          }
+
+          if ($index.Contains('<h3>@Leafs29</h3>')) {
+              throw "Handle-only founder identity is prohibited; a public human-readable founder name is required."
           }
 
           $lower = $index.ToLowerInvariant()
